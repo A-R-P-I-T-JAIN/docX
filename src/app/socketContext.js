@@ -13,7 +13,7 @@ export const SocketProvider = ({ children }) => {
 
   useEffect(() => {
     console.log("Attempting to connect to socket...");
-    const newSocket = io('http://localhost:3001'); // Replace with your socket server URL
+    const newSocket = io('https://doc-x-xi.vercel.app/'); // Replace with your socket server URL
 
     newSocket.on('connect', () => {
       console.log("Socket connected successfully!");
