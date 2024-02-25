@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Quill from "quill";
 import { useSocket } from '@/app/socketContext';
 
-const page = ({params}) => {
+const Page = ({params}) => {
 
   const socket = useSocket()
 
@@ -36,11 +36,10 @@ const page = ({params}) => {
       }, []);
 
   return (
-    // <div className="w-screen flex items-center" >
-    <div id='container2' className="flex items-center justify-center py-5" >
-      
-    </div>
+    <>
+    <div id='container2' className="flex items-center justify-center py-5" ></div>
+    </>
   )
 }
 
-export default page
+export default Page

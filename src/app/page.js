@@ -1,9 +1,25 @@
 "use client";
 import { useRouter } from "next/navigation";
 import "./style.css";
+import { useEffect, useState } from "react";
 export default function Home() {
-  const isMobile = window.innerWidth < 700;
-  const router = useRouter()
+
+  const [isMobile, setIsMobile] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 700);
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen w-screen bg-black text-white flex flex-col items-center">
       <div className="main flex flex-col items-center justify-center w-full h-[90vh] md:h-screen gap-4">

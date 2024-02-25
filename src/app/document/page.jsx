@@ -94,6 +94,7 @@ const Page = () => {
         {sharedDocuments && sharedDocuments.length > 0 ? (
           sharedDocuments.map((doc) => (
             <div
+              key={doc._id}
               className="w-20 md:w-32 h-28 md:h-40 px-6 bg-white flex flex-col items-center justify-center cursor-pointer"
               onClick={() => {
                 // router.push(`/document/${doc._id}`);
