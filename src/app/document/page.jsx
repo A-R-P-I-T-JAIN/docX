@@ -18,7 +18,7 @@ const Page = () => {
 
     const handler = (id) => {
       // router.push(`document/${id}`);
-      window.open (`http://localhost:3000/document/${id}`, '_ blank');
+      window.open (`https://docxx-tawny.vercel.app/document/${id}`, '_ blank');
     };
 
     socket.on("document-created", handler);
@@ -75,7 +75,7 @@ const Page = () => {
               className="w-20 md:w-32 h-28 md:h-40 px-6 bg-white flex flex-col items-center justify-center cursor-pointer"
               onClick={() => {
                 // router.push(`/document/${doc._id}`);
-                window.open (`http://localhost:3000/document/${doc._id}`, '_ blank');
+                window.open (`https://docxx-tawny.vercel.app/document/${doc._id}`, '_ blank');
               }}
             >
               <p>{doc.name}</p>
@@ -98,7 +98,7 @@ const Page = () => {
               className="w-20 md:w-32 h-28 md:h-40 px-6 bg-white flex flex-col items-center justify-center cursor-pointer"
               onClick={() => {
                 // router.push(`/document/${doc._id}`);
-                window.open (`http://localhost:3000/document/${doc._id}`, '_ blank');
+                window.open (`https://docxx-tawny.vercel.app/document/${doc._id}`, '_ blank');
               }}
             >
               <p>{doc.name}</p>

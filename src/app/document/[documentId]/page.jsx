@@ -43,8 +43,8 @@ const Page = ({ params }) => {
   const [showShare, setShowShare] = useState(isMobile ? false : true);
   const [share, setShare] = useState(false);
 
-  const url = `http://localhost:3000/document/${id}`;
-  const publicUrl = `http://localhost:3000/readOnly/${id}`;
+  const url = `https://docxx-tawny.vercel.app/document/${id}`;
+  const publicUrl = `https://docxx-tawny.vercel.app/readOnly/${id}`;
 
   useEffect(() => {
     const handleBeforeUnload = () => {
