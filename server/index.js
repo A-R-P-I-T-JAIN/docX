@@ -22,7 +22,7 @@ mongoose
     },
   });
 
-  const port = 3001;
+  const port = process.env.PORT || 3001;
 
 io.on("connection", (socket) => {
   console.log("connected");
